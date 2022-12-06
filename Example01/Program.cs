@@ -9,6 +9,13 @@ int numberA = IntoInt();
 int numberB = IntoInt();
 
 double exponentOfNum = GetExponentOfNumber(numberA, numberB);
+
+if (numberA == 0 && numberA == 0)
+{
+    Console.WriteLine("Incorrect number");
+    return;
+}
+
 Console.WriteLine($"Число {numberA} в степени {numberB} = {exponentOfNum}");
 
 double GetExponentOfNumber(int numA, int numB)
@@ -26,8 +33,7 @@ int IntoInt()
     bool isParsed = int.TryParse(Console.ReadLine(), out int num);
     if (!isParsed || num < 1)
     {
-        Console.WriteLine("Incorrect number");
-        return -1;
+        return 0;
     }
     else
     {
